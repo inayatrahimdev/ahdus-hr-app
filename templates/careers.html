@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahdus Technology - Careers</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="/static/images/logo.jpg" alt="Ahdus Technology Logo"></a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/about-us" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="/careers" class="nav-link active">Careers</a></li>
+                    <li class="nav-item"><a href="/contact-us" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Careers Hero -->
+    <section class="careers-hero">
+        <div class="container">
+            <h1>Join Our Team</h1>
+            <p>Explore exciting career opportunities at Ahdus Technology.</p>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search jobs by title, location..." onkeyup="filterJobs()">
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listings -->
+    <section class="job-listings">
+        <div class="container">
+            <h2 class="section-title">Open Positions</h2>
+            <div id="loading">Loading opportunities...</div>
+            <div id="jobs-container" class="jobs-grid"></div>
+        </div>
+    </section>
+
+    <!-- Application Modal -->
+    <div id="apply-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Apply for Position</h2>
+            <form id="apply-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cv">Upload CV (PDF Only)</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Ahdus Technology</h3>
+                    <p>Leading the way in tech innovation since 2020.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact-us">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@ahdus.com</p>
+                    <p><i class="fas fa-phone"></i> +49 30 1234 5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Berlin, Germany</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Ahdus Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
